@@ -19,12 +19,7 @@ from config import Settings
 router = APIRouter()
 settings = Settings()
 
-# Ensure upload directory exists
-# UPLOAD_DIR = Path("data/documents")
-# UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
 
-
-# Request/Response models
 class QueryRequest(BaseModel):
     query: str
     conversation_history: Optional[List[dict]] = None

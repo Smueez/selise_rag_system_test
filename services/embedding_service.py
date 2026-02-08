@@ -6,7 +6,7 @@ import tiktoken
 
 
 class EmbeddingService:
-    """Generate embeddings using Azure OpenAI"""
+
 
     def __init__(
             self,

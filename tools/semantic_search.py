@@ -6,7 +6,6 @@ from services.retriver_service import Retriever
 
 
 class SemanticSearchTool(BaseTool):
-    """Tool for semantic search in the document"""
 
     name = "semantic_search"
     description = (
@@ -36,7 +35,7 @@ class SemanticSearchTool(BaseTool):
         }
 
     def execute(self, input_data: Dict[str, Any]) -> Dict[str, Any]:
-        """Execute semantic search"""
+
         try:
             query = input_data.get("query")
             top_k = input_data.get("top_k", 5)

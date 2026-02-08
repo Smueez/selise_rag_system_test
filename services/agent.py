@@ -46,7 +46,7 @@ class ReflectiveAgent:
         logger.info("Initialized ReflectiveAgent with self-reflection")
 
     def get_tool_schemas(self) -> List[Dict[str, Any]]:
-        """Get schemas for all tools (excluding validator for initial retrieval)"""
+
         schemas = []
         # Only include search tools in the initial phase
         for tool_name in ["semantic_search", "multi_query_search", "exact_match_search"]:
@@ -55,7 +55,7 @@ class ReflectiveAgent:
         return schemas
 
     def execute_tool(self, tool_name: str, arguments: Dict[str, Any]) -> Dict[str, Any]:
-        """Execute a tool and return results"""
+
         if tool_name not in self.tools:
             return {
                 "success": False,
@@ -176,9 +176,7 @@ Be lenient - if the answer is reasonable and grounded, mark as satisfactory."""
         query: str,
         conversation_history: Optional[List[Dict[str, str]]] = None
     ) -> AsyncGenerator[str, None]:
-        """
-        Process query with streaming response and self-reflection
-        """
+
         if conversation_history is None:
             conversation_history = []
 

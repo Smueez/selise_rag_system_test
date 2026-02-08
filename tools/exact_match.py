@@ -7,7 +7,6 @@ from services.vector_store_service import VectorStoreService
 
 
 class ExactMatchTool(BaseTool):
-    """Tool for exact keyword/phrase matching"""
 
     name = "exact_match_search"
     description = (
@@ -44,17 +43,10 @@ class ExactMatchTool(BaseTool):
 
             logger.info(f"Executing exact match search: {keyword}")
 
-            # Get all documents from collection (simplified approach)
-            # In production, you might want to implement a full-text search index
+
             collection_info = self.vector_store.get_collection_info()
 
-            # For now, we'll scroll through points and filter
-            # This is a simplified implementation
             matches = []
-
-            # Note: This is a basic implementation
-            # For production, consider using a proper full-text search engine
-            # or maintaining a separate keyword index
 
             scroll_result = self.vector_store.client.scroll(
                 collection_name=self.vector_store.collection_name,

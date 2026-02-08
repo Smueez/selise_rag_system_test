@@ -6,7 +6,6 @@ import tiktoken
 
 
 class DocumentProcessorService:
-    """Handles PDF loading and intelligent chunking"""
 
     def __init__(self, chunk_size: int = 1000, chunk_overlap: int = 200, max_tokens: int = 6000):
         self.chunk_size = chunk_size
@@ -57,10 +56,7 @@ class DocumentProcessorService:
         return text.strip()
 
     def chunk_text(self, text: str) -> List[Dict[str, Any]]:
-        """
-        Token-aware chunking with overlap
-        Ensures no chunk exceeds max_tokens
-        """
+
         # Clean text first
         text = self.clean_text(text)
 

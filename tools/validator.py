@@ -5,7 +5,6 @@ from .base_tools import BaseTool
 
 
 class AnswerValidatorTool(BaseTool):
-    """Tool to validate if an answer is grounded in the context"""
 
     name = "validate_answer"
     description = (

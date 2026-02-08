@@ -92,10 +92,7 @@ class Retriever:
         }
 
     def multi_query_retrieve(self, queries: List[str], top_k: int = 3) -> List[Dict[str, Any]]:
-        """
-        Retrieve documents for multiple query variations
-        Deduplicates and ranks by best score
-        """
+
         all_results = {}
 
         for query in queries:

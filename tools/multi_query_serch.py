@@ -6,7 +6,6 @@ from services.retriver_service import Retriever
 
 
 class MultiQuerySearchTool(BaseTool):
-    """Tool for multi-query search with query reformulation"""
 
     name = "multi_query_search"
     description = (

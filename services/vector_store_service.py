@@ -12,7 +12,7 @@ import uuid
 
 
 class VectorStoreService:
-    """Manages Qdrant vector store operations"""
+
 
     def __init__(
             self,
